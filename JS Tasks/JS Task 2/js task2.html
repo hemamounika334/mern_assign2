@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort String Alphabetically</title>
+</head>
+
+<body>
+    <div id="output"></div>
+
+    <script>
+        function sortStringAlphabetically(str) {
+            return str.split('').sort().join('');
+        }
+
+        const inputString = 'webmaster';
+        const sortedString = sortStringAlphabetically(inputString);
+
+        document.getElementById('output').textContent = 'Sorted string: ' + sortedString;
+    </script>
+</body>
+
+</html>
+

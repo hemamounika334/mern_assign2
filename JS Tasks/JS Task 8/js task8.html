@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+</head>
+
+<body>
+
+    <form style="margin-left: 300px; margin-right: 300px; margin-top: 50px;">
+
+        <center style=" background-image: linear-gradient(to top, #cc92ba 0%, #f2e7c9 100%);">
+            <caption>
+                <h2 style="color: blue;"><b>Registration form</b></h2>
+            </caption>
+            <table>
+
+                <tr>
+                    <td align="center"><label for="fn"><b>First Name</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value, 's1')" id="i1" type="text" style="width: 400px;" />
+                    </td>
+                    <td><span id="s1" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="ln"><b>Last Name</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s2')" id="i2" type="text" style="width: 400px;" />
+                    </td>
+                    <td><span id="s2" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="email"><b>Email</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s3')" id="i3" type="email" style="width: 400px;" />
+                    </td>
+                    <td><span id="s3" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="pwd"><b>Password</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s4')" id="i4" type="password" style="width: 400px;" />
+                    </td>
+                    <td><span id="s4" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="rpwd"><b>Re-enter Password</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s5')" id="i5" type="password" style="width: 400px;" />
+                    </td>
+                    <td><span id="s5" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label><b>Gender</b></label></td>
+                    <td>
+                        <input type="radio" />Male <br>
+                        <input type="radio" />Female
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="age"><b>Age</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s6')" id="i6" type="number" style="width: 400px;" />
+                    </td>
+                    <td><span id="s6" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="phone"><b>Phone Number</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s7')" id="i7" type="number" style="width: 400px;" />
+                    </td>
+                    <td><span id="s7" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="address"><b>Address</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s8')" id="i8" type="text" style="width: 400px;" />
+                    </td>
+                    <td><span id="s8" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="state"><b>State</b></label></td>
+                    <td>
+                        <input onkeyup="checkStrength(this.value,'s9')" id="i9" type="text" style="width: 400px;" />
+                    </td>
+                    <td><span id="s9" style="color: red;"></span>
+                        
+   
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label for="country"><b>Country</b></label></td>
+                    <td colspan="2">
+                        <select id="country" name="country">
+                            <option>Choose your country</option>
+                            <option>India</option>
+                            <option>USA</option>
+                            <option>UK</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td align="center"><label><b>Languages known</b></label></td>
+                    <td>
+                        <input type="checkbox" />English
+                        <input type="checkbox" />Kannada
+                        <input type="checkbox" />Hindi
+                        <input type="checkbox" />Telugu
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id=agree name="agree" value="yes" />Hereby I declare all the given
+                        details are true
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="right">
+                        Log in to <a href="https://ethnus.com">Ethnus</a> website
+                    </td>
+                </tr>
+            </table>
+
+            <br>
+            <input type="button" class="btn btn-danger rounded-pill" align="center" value="REGISTER" style="border-radius: 100px; background-color: rgb(241, 55, 55); border-color:2px black; color: white; width: 80px;"/>
+
+
+        </center>
+
+    </form>
+
+    <script>
+        function checkStrength(inputValue, outputId) {
+            const strengthSpan = document.getElementById(outputId);
+            if (inputValue.length < 4) {
+                strengthSpan.textContent = 'POOR';
+            } else if (inputValue.length < 8) {
+                strengthSpan.textContent = 'FAIR';
+            } else {
+                strengthSpan.textContent = 'GOOD';
+            }
+        }
+    </script>
+</body>
+
+</html>
